@@ -83,7 +83,10 @@ const Contact = () => {
             {/* right */}
             <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
               <div className="p-4">
-                <form action="https://formsubmit.co/fratzantigua@gmail.com" method="POST">
+                <form
+                  action="https://formsubmit.co/fratzantigua@gmail.com"
+                  method="POST"
+                >
                   <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                     <div className="flex flex-col">
                       <label className="uppercase text-sm py-2">Name</label>
@@ -132,10 +135,21 @@ const Contact = () => {
                       required
                     ></textarea>
                   </div>
-                  <input type="hidden" name="_next" value="https://fratzantigua.com/thank-you" />
-                  <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission" />
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://fratzantigua-portfolio.vercel.app/thank-you"
+                  />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Portfolio Contact Form Submission"
+                  />
                   <input type="hidden" name="_captcha" value="true" />
-                  <button type="submit" className="w-full p-4 text-gray-100 mt-4 bg-primary rounded-lg hover:bg-blue-700 ease-in duration-300">
+                  <button
+                    type="submit"
+                    className="w-full p-4 text-gray-100 mt-4 bg-primary rounded-lg hover:bg-blue-700 ease-in duration-300"
+                  >
                     Send Message
                   </button>
                 </form>
