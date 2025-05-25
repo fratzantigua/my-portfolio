@@ -42,9 +42,6 @@ const About = () => {
               spare time I actively engage and enhance my skills in the software
               development space.
             </p>
-            <p className="py-2 text-gray-600 underline cursor-pointer">
-              Check out some of my latest projects.
-            </p>
           </motion.div>
         </div>
         <motion.div

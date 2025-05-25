@@ -321,7 +321,7 @@ I started software development in 2018 managing multiple software applications. 
             className="mt-4 flex items-center mx-auto bg-primary hover:bg-primary/80 text-white py-2 px-4 rounded-md transition-colors duration-300"
           >
             <FaFileDownload className="mr-2" />
-            Download Complete Resume (MD)
+            Download Complete Resume
           </button>
         </motion.div>
 
