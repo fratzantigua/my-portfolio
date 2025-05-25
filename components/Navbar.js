@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   
   const handleNav = () => {
     setNav(!nav);
@@ -18,82 +20,150 @@ const Navbar = () => {
         setShadow(false);
       }
     };
+
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const scrollPosition = window.scrollY + 300; // Offset for better detection
+
+      sections.forEach(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section);
+          }
+        }
+      });
+    };
+
     window.addEventListener('scroll', handleShadow);
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check for active section
+    handleScroll();
+    
     return () => {
       window.removeEventListener('scroll', handleShadow);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  const navItems = [
+    { id: 'home', label: 'Home', href: '/' },
+    { id: 'about', label: 'About', href: '/#about' },
+    { id: 'skills', label: 'Skills', href: '/#skills' },
+    { id: 'projects', label: 'Projects', href: '/#projects' },
+    { id: 'contact', label: 'Contact', href: '/#contact' },
+  ];
+
   return (
-    <header className={shadow ? 'fixed w-full h-20 shadow-xl z-[100] bg-white/90 backdrop-blur-sm' : 'fixed w-full h-20 z-[100]'}>
-      <div className='flex justify-between items-center w-full h-full px-6 2xl:px-16'>
+    <header className={`fixed w-full z-[100] transition-all duration-300 ${shadow ? 'h-20 shadow-elegant bg-card/95 backdrop-blur-md' : 'h-24'}`}>
+      <div className='container-custom flex justify-between items-center w-full h-full'>
         <Link href='/'>
-          <span className='text-2xl font-bold text-primary cursor-pointer'>Portfolio</span>
+          <a className='relative group'>
+            <span className='text-2xl font-bold bg-gradient-elegant bg-clip-text text-transparent'>Portfolio</span>
+            <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300'></span>
+          </a>
         </Link>
-        <div>
-          <ul className='hidden md:flex'>
-            <li className='ml-10 text-sm uppercase hover:text-primary'>
-              <Link href='/'>Home</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:text-primary'>
-              <Link href='/#about'>About</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:text-primary'>
-              <Link href='/#skills'>Skills</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:text-primary'>
-              <Link href='/#projects'>Projects</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:text-primary'>
-              <Link href='/#contact'>Contact</Link>
-            </li>
+        
+        <nav className='hidden md:block'>
+          <ul className='flex items-center space-x-8'>
+            {navItems.map((item) => (
+              <li key={item.id}>
+                <Link href={item.href}>
+                  <a className={`relative py-2 text-sm font-medium transition-colors duration-300 ${activeSection === item.id ? 'text-primary' : 'text-secondary hover:text-primary'}`}>
+                    {item.label}
+                    {activeSection === item.id && (
+                      <motion.span 
+                        layoutId="navbar-indicator"
+                        className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"
+                        transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                      />
+                    )}
+                  </a>
+                </Link>
+              </li>
+            ))}
           </ul>
-          <div onClick={handleNav} className='md:hidden cursor-pointer'>
-            <FaBars size={25} />
-          </div>
+        </nav>
+        
+        <div className='hidden md:block'>
+          <Link href='/#contact'>
+            <a className='btn-primary text-sm py-2'>Get In Touch</a>
+          </Link>
         </div>
+        
+        <button 
+          onClick={handleNav} 
+          className='md:hidden p-2 text-primary hover:bg-primary/10 rounded-md transition-colors duration-300'
+          aria-label="Toggle navigation menu"
+        >
+          <FaBars size={24} />
+        </button>
       </div>
 
-      <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
-        <div className={
-          nav
-            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-10 ease-in duration-500'
-            : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
-        }>
-          <div>
-            <div className='flex w-full items-center justify-between'>
-              <Link href='/'>
-                <span className='text-2xl font-bold text-primary'>Portfolio</span>
-              </Link>
-              <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
-                <FaTimes />
+      <AnimatePresence>
+        {nav && (
+          <>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className='md:hidden fixed inset-0 bg-dark/60 backdrop-blur-sm z-[101]'
+              onClick={handleNav}
+            />
+            
+            <motion.div 
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '-100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className='md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] h-screen bg-card z-[102] p-8 overflow-y-auto'
+            >
+              <div className='flex justify-between items-center mb-8'>
+                <Link href='/'>
+                  <a className='text-2xl font-bold bg-gradient-elegant bg-clip-text text-transparent' onClick={() => setNav(false)}>Portfolio</a>
+                </Link>
+                <button 
+                  onClick={handleNav} 
+                  className='p-2 text-muted hover:text-primary hover:bg-primary/10 rounded-full transition-colors duration-300'
+                  aria-label="Close navigation menu"
+                >
+                  <FaTimes size={20} />
+                </button>
               </div>
-            </div>
-            <div className='border-b border-gray-300 my-4'>
-              <p className='w-[85%] md:w-[90%] py-4'>Let's build something legendary together</p>
-            </div>
-          </div>
-          <div className='py-4 flex flex-col'>
-            <ul className='uppercase'>
-              <Link href='/'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm hover:text-primary'>Home</li>
-              </Link>
-              <Link href='/#about'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm hover:text-primary'>About</li>
-              </Link>
-              <Link href='/#skills'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm hover:text-primary'>Skills</li>
-              </Link>
-              <Link href='/#projects'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm hover:text-primary'>Projects</li>
-              </Link>
+              
+              <div className='border-b border-muted/20 mb-6'>
+                <p className='pb-4 text-secondary'>Crafting digital experiences</p>
+              </div>
+              
+              <nav className='mb-8'>
+                <ul className='space-y-4'>
+                  {navItems.map((item) => (
+                    <li key={item.id}>
+                      <Link href={item.href}>
+                        <a 
+                          className={`block py-2 px-4 rounded-md transition-colors duration-300 ${activeSection === item.id ? 'bg-primary/10 text-primary' : 'text-secondary hover:bg-primary/5 hover:text-primary'}`}
+                          onClick={() => setNav(false)}
+                        >
+                          {item.label}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              
               <Link href='/#contact'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm hover:text-primary'>Contact</li>
+                <a className='btn-primary w-full text-center' onClick={() => setNav(false)}>Get In Touch</a>
               </Link>
-            </ul>
-          </div>
-        </div>
-      </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

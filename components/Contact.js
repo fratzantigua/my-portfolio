@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen">
+    <div id="contact" className="w-full py-16">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -35,8 +35,8 @@ const Contact = () => {
                   */}
                 </div>
                 <div>
-                  <h2 className="py-2">Your Name</h2>
-                  <p>Full-Stack Developer</p>
+                  <h2 className="py-2">Fratz Antigua</h2>
+                  <p>Full-Stack Software Engineer</p>
                   <p className="py-4">
                     I am available for freelance or full-time positions. Contact
                     me and let's talk.
@@ -70,7 +70,7 @@ const Contact = () => {
                       <FaTwitter />
                     </a>
                     <a
-                      href="mailto:email@example.com"
+                      href="mailto:fratzantigua@gmail.com"
                       className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
                     >
                       <HiOutlineMail />
@@ -83,13 +83,15 @@ const Contact = () => {
             {/* right */}
             <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
               <div className="p-4">
-                <form>
+                <form action="https://formsubmit.co/fratzantigua@gmail.com" method="POST">
                   <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                     <div className="flex flex-col">
                       <label className="uppercase text-sm py-2">Name</label>
                       <input
                         className="border-2 rounded-lg p-3 flex border-gray-300 focus:outline-none focus:border-primary"
                         type="text"
+                        name="name"
+                        required
                       />
                     </div>
                     <div className="flex flex-col">
@@ -99,6 +101,7 @@ const Contact = () => {
                       <input
                         className="border-2 rounded-lg p-3 flex border-gray-300 focus:outline-none focus:border-primary"
                         type="text"
+                        name="phone"
                       />
                     </div>
                   </div>
@@ -107,6 +110,8 @@ const Contact = () => {
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300 focus:outline-none focus:border-primary"
                       type="email"
+                      name="email"
+                      required
                     />
                   </div>
                   <div className="flex flex-col py-2">
@@ -114,6 +119,8 @@ const Contact = () => {
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300 focus:outline-none focus:border-primary"
                       type="text"
+                      name="subject"
+                      required
                     />
                   </div>
                   <div className="flex flex-col py-2">
@@ -121,9 +128,14 @@ const Contact = () => {
                     <textarea
                       className="border-2 rounded-lg p-3 border-gray-300 focus:outline-none focus:border-primary"
                       rows="10"
+                      name="message"
+                      required
                     ></textarea>
                   </div>
-                  <button className="w-full p-4 text-gray-100 mt-4 bg-primary rounded-lg hover:bg-blue-700 ease-in duration-300">
+                  <input type="hidden" name="_next" value="https://fratzantigua.com/thank-you" />
+                  <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission" />
+                  <input type="hidden" name="_captcha" value="true" />
+                  <button type="submit" className="w-full p-4 text-gray-100 mt-4 bg-primary rounded-lg hover:bg-blue-700 ease-in duration-300">
                     Send Message
                   </button>
                 </form>

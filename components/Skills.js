@@ -1,64 +1,134 @@
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FaCode, FaDatabase, FaServer, FaTools } from "react-icons/fa";
+
+const SkillCategory = ({ title, icon, children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true }}
+    className="mb-12"
+  >
+    <div className="flex items-center mb-6">
+      <div className="mr-4 text-primary">{icon}</div>
+      <h3 className="text-2xl font-bold">{title}</h3>
+    </div>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      {children}
+    </div>
+  </motion.div>
+);
+
+const SkillItem = ({ skill, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 15 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.4, delay: index * 0.05 }}
+    viewport={{ once: true }}
+    className="card p-4 flex flex-col items-center justify-center hover:border-primary hover:border transition-all duration-300"
+  >
+    <div className="w-16 h-16 mb-3 flex items-center justify-center">
+      {/* Use Image component for icons */}
+      <Image src={skill.icon} alt={skill.name} width={48} height={48} />
+    </div>
+    <h4 className="font-medium text-center">{skill.name}</h4>
+  </motion.div>
+);
+
+// Export skill arrays for use in other components
+export const frontendSkills = [
+  { name: "HTML", icon: "/skills/html.svg" },
+  { name: "CSS", icon: "/skills/css.svg" },
+  { name: "JavaScript", icon: "/skills/javascript.svg" },
+  { name: "TypeScript", icon: "/skills/typescript.svg" },
+  { name: "Next.js", icon: "/skills/nextjs.svg" },
+  { name: "Angular", icon: "/skills/angular.svg" },
+  { name: "Bootstrap", icon: "/skills/bootstrap.svg" },
+];
+
+export const backendSkills = [
+  { name: "Node.js", icon: "/skills/nodejs.svg" },
+  { name: "Express", icon: "/skills/express.svg" },
+  { name: "Firebase", icon: "/skills/firebase.svg" },
+  { name: "Python", icon: "/skills/python.svg" },
+  { name: "Java", icon: "/skills/java.svg" },
+  { name: "C#", icon: "/skills/csharp.svg" },
+  { name: "C++", icon: "/skills/C++.svg" },
+  { name: "PHP", icon: "/skills/php.svg" },
+  { name: "Shell", icon: "/skills/shell.svg" },
+];
+
+export const databaseSkills = [
+  { name: "PostgreSQL", icon: "/skills/postgresql.svg" },
+  { name: "NoSQL", icon: "/skills/nosql.svg" },
+  { name: "MySQL", icon: "/skills/mysql.svg" },
+  { name: "Sybase", icon: "/skills/sybase.svg" },
+  { name: "Oracle", icon: "/skills/oracle.svg" },
+];
+
+export const toolsSkills = [
+  { name: "GitHub", icon: "/skills/github.svg" },
+  { name: "Docker", icon: "/skills/docker.svg" },
+  { name: "Jenkins", icon: "/skills/jenkins.svg" },
+  { name: "Jira", icon: "/skills/jira.svg" },
+  { name: "Atlassian", icon: "/skills/atlassian.svg" },
+  { name: "AWS", icon: "/skills/aws.svg" },
+  { name: "Vercel", icon: "/skills/vercel.svg" },
+  { name: "OpenAI", icon: "/skills/openai.svg" },
+  { name: "Postman", icon: "/skills/postman.svg" },
+];
 
 const Skills = () => {
-  const skills = [
-    { name: 'HTML', icon: '/skills/html.png' },
-    { name: 'CSS', icon: '/skills/css.png' },
-    { name: 'JavaScript', icon: '/skills/javascript.png' },
-    { name: 'React', icon: '/skills/react.png' },
-    { name: 'Next.js', icon: '/skills/nextjs.png' },
-    { name: 'Node.js', icon: '/skills/node.png' },
-    { name: 'MongoDB', icon: '/skills/mongodb.png' },
-    { name: 'Tailwind', icon: '/skills/tailwind.png' },
-    { name: 'Firebase', icon: '/skills/firebase.png' },
-    { name: 'GitHub', icon: '/skills/github.png' },
-  ];
 
   return (
-    <div id='skills' className='w-full lg:h-screen p-2'>
-      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
+    <div id="skills" className="w-full py-20 bg-background relative">
+      {/* Background accent */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primaryLight/5 rounded-bl-full"></div>
+
+      <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          className="mb-16 text-center"
         >
-          <p className='text-xl tracking-widest uppercase text-primary'>Skills</p>
-          <h2 className='py-4'>What I Can Do</h2>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8'>
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'
-              >
-                <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                  <div className='m-auto'>
-                    <div className='w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center'>
-                      {/* Replace with actual icons when available */}
-                      <span className='text-xs text-center'>{skill.name}</span>
-                      {/* Uncomment when you have icons
-                      <Image
-                        src={skill.icon}
-                        alt={skill.name}
-                        width={40}
-                        height={40}
-                      />
-                      */}
-                    </div>
-                  </div>
-                  <div className='flex flex-col items-center justify-center'>
-                    <h3>{skill.name}</h3>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <p className="section-title inline-block">Skills</p>
+          <h2 className="mt-6 mb-4">My Technical Expertise</h2>
+          <p className="text-lg max-w-2xl mx-auto">
+            I've worked with a range of technologies in the web development
+            world, from front-end to back-end, always focusing on creating
+            elegant and efficient solutions.
+          </p>
         </motion.div>
+
+        <SkillCategory title="Frontend Development" icon={<FaCode size={24} />}>
+          {frontendSkills.map((skill, index) => (
+            <SkillItem key={index} skill={skill} index={index} />
+          ))}
+        </SkillCategory>
+
+        <SkillCategory
+          title="Backend Development"
+          icon={<FaServer size={24} />}
+        >
+          {backendSkills.map((skill, index) => (
+            <SkillItem key={index} skill={skill} index={index} />
+          ))}
+        </SkillCategory>
+
+        <SkillCategory title="Database" icon={<FaDatabase size={24} />}>
+          {databaseSkills.map((skill, index) => (
+            <SkillItem key={index} skill={skill} index={index} />
+          ))}
+        </SkillCategory>
+
+        <SkillCategory title="Tools & Platforms" icon={<FaTools size={24} />}>
+          {toolsSkills.map((skill, index) => (
+            <SkillItem key={index} skill={skill} index={index} />
+          ))}
+        </SkillCategory>
       </div>
     </div>
   );
