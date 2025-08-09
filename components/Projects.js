@@ -107,7 +107,7 @@ const Projects = () => {
 
 ## ABOUT ME
 
-Hardworking and results-driven IT professional with 7 years of experience in the industry, specializing in application development, coding, and system maintenance. Proven ability to deliver high-quality software solutions and contribute effectively in team-oriented environments. Skilled communicator with a strong willingness to continuously learn and adapt to evolving technologies. 
+Hardworking and results-driven IT professional with 7 years of experience in the industry, specializing in application development, coding, and system maintenance. Proven ability to deliver high-quality software solutions and contribute effectively in team-oriented environments. Skilled communicator with a strong willingness to continuously learn and adapt to evolving technologies.
 
 With a keen interest in modern development practices, I actively stay updated on emerging tools, frameworks, and methodologies, including cloud computing, DevOps practices, and containerization technologies. I am particularly enthusiastic about the growing impact of artificial intelligence and machine learning in software development, and I'm eager to explore how these innovations can enhance application performance, automate processes, and drive smarter decision-making.
 
