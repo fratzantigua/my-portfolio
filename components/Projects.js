@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaExternalLinkAlt, FaFileDownload } from "react-icons/fa";
 import { useCallback } from "react";
-import { jsPDF } from "jspdf";
-import { marked } from "marked";
 import {
   frontendSkills,
   backendSkills,
@@ -103,188 +101,23 @@ const ProjectItem = ({
 const Projects = () => {
   // Function to generate and download resume
   const exportResume = useCallback(() => {
-    // Get about me content
-    const getAboutMe = () => {
-      const aboutContent = `# FRATZ ANTIGUA
-
-## ABOUT ME
-
-Hardworking and results-driven IT professional with 7 years of experience in the industry, specializing in application development, coding, and system maintenance. Proven ability to deliver high-quality software solutions and contribute effectively in team-oriented environments. Skilled communicator with a strong willingness to continuously learn and adapt to evolving technologies.
-
-With a keen interest in modern development practices, I actively stay updated on emerging tools, frameworks, and methodologies, including cloud computing, DevOps practices, and containerization technologies. I am particularly enthusiastic about the growing impact of artificial intelligence and machine learning in software development, and I'm eager to explore how these innovations can enhance application performance, automate processes, and drive smarter decision-making.
-
-I started software development in 2018 managing multiple software applications. I have experience working directly with clients and taking mock wireframes all the way to deployed applications. In my spare time I actively engage and enhance my skills in the software development space.
-
-`;
-      return aboutContent;
-    };
-
-    // Format skills data for resume
-    const formatSkills = () => {
-      let skillsContent = "## TECHNICAL SKILLS\n\n";
-
-      // Frontend skills
-      skillsContent += "### Frontend Development\n";
-      const frontendSkillNames = frontendSkills
-        .map((skill) => skill.name)
-        .join(", ");
-      skillsContent += `${frontendSkillNames}\n\n`;
-
-      // Backend skills
-      skillsContent += "### Backend Development\n";
-      const backendSkillNames = backendSkills
-        .map((skill) => skill.name)
-        .join(", ");
-      skillsContent += `${backendSkillNames}\n\n`;
-
-      // Database skills
-      skillsContent += "### Database Technologies\n";
-      const databaseSkillNames = databaseSkills
-        .map((skill) => skill.name)
-        .join(", ");
-      skillsContent += `${databaseSkillNames}\n\n`;
-
-      // Tools skills
-      skillsContent += "### Tools & Platforms\n";
-      const toolsSkillNames = toolsSkills.map((skill) => skill.name).join(", ");
-      skillsContent += `${toolsSkillNames}\n\n`;
-
-      return skillsContent;
-    };
-
-    // Format work experience data for resume
-    const formatWorkExperience = () => {
-      let resumeContent = "## PROFESSIONAL EXPERIENCE\n\n";
-
-      projects.forEach((project, index) => {
-        // Skip projects that aren't work experience (those without bullet points)
-        if (!project.bulletPoints || project.bulletPoints.length === 0) return;
-
-        resumeContent += `### ${project.title}\n`;
-        resumeContent += `${project.description}\n\n`;
-        resumeContent += "**Responsibilities:**\n";
-
-        project.bulletPoints.forEach((point) => {
-          resumeContent += `- ${point}\n`;
-        });
-
-        resumeContent += "\n**Technologies:** ";
-        resumeContent += `${project.tech}\n\n`;
-
-        // Add separator except for the last item
-        if (
-          index < projects.length - 1 &&
-          index <
-            projects.filter((p) => p.bulletPoints && p.bulletPoints.length > 0)
-              .length -
-              1
-        ) {
-          resumeContent += "---\n\n";
-        }
-      });
-
-      return resumeContent;
-    };
-
-    // Create and download the file as PDF
-    const aboutMeContent = getAboutMe();
-    const skillsContent = formatSkills();
-    const workExperienceContent = formatWorkExperience();
-
-    const fullResumeContent =
-      aboutMeContent + skillsContent + workExperienceContent;
-      
-    // Convert markdown to HTML
-    const htmlContent = marked.parse(fullResumeContent);
+    // Create a link element to download the pre-generated PDF file
+    const link = document.createElement('a');
     
-    // Create PDF document
-    const pdf = new jsPDF({
-      orientation: "portrait",
-      unit: "mm",
-      format: "a4",
-    });
+    // Set the href to the pre-generated PDF file in the public directory
+    link.href = '/documents/fratz_antigua_resume.pdf';
     
-    // Set title and author metadata
-    pdf.setProperties({
-      title: "Fratz Antigua - Resume",
-      author: "Fratz Antigua",
-      subject: "Professional Resume",
-      keywords: "resume, software engineer, web developer",
-    });
+    // Set download attribute to suggest a filename
+    link.download = 'fratz_antigua_resume.pdf';
     
-    // Split the HTML content into pages to avoid overflow
-    const splitText = pdf.splitTextToSize(
-      htmlContent.replace(/<[^>]*>/g, ''), // Remove HTML tags
-      180 // Width in mm for content area
-    );
+    // Append to the document
+    document.body.appendChild(link);
     
-    // Add content to PDF
-    pdf.setFontSize(12);
+    // Trigger the download
+    link.click();
     
-    // Add title
-    pdf.setFontSize(24);
-    pdf.text("FRATZ ANTIGUA", 105, 20, { align: "center" });
-    pdf.setFontSize(16);
-    pdf.text("Professional Resume", 105, 30, { align: "center" });
-    pdf.setFontSize(12);
-    
-    // Add content with proper formatting
-    let yPosition = 40;
-    const lineHeight = 7;
-    
-    // Function to add a section to the PDF
-    const addSection = (title, content) => {
-      // Add section title
-      pdf.setFontSize(16);
-      pdf.setFont(undefined, 'bold');
-      pdf.text(title, 15, yPosition);
-      yPosition += lineHeight;
-      
-      // Add section content
-      pdf.setFontSize(12);
-      pdf.setFont(undefined, 'normal');
-      
-      // Split content into lines
-      const lines = content.split('\n');
-      
-      lines.forEach(line => {
-        // Check if we need a new page
-        if (yPosition > 270) {
-          pdf.addPage();
-          yPosition = 20;
-        }
-        
-        // Check if line is a header
-        if (line.startsWith('###')) {
-          pdf.setFont(undefined, 'bold');
-          pdf.text(line.replace(/^### /, ''), 15, yPosition);
-          pdf.setFont(undefined, 'normal');
-        } 
-        // Check if line is a bullet point
-        else if (line.startsWith('- ')) {
-          pdf.text(`• ${line.substring(2)}`, 20, yPosition);
-        } 
-        // Regular text
-        else if (line.trim() !== '') {
-          pdf.text(line, 15, yPosition);
-        }
-        
-        if (line.trim() !== '') {
-          yPosition += lineHeight;
-        }
-      });
-      
-      // Add spacing after section
-      yPosition += lineHeight;
-    };
-    
-    // Add sections to PDF
-    addSection("ABOUT ME", aboutMeContent.replace(/^# FRATZ ANTIGUA\n\n## ABOUT ME\n\n/, ''));
-    addSection("TECHNICAL SKILLS", skillsContent.replace(/^## TECHNICAL SKILLS\n\n/, ''));
-    addSection("PROFESSIONAL EXPERIENCE", workExperienceContent.replace(/^## PROFESSIONAL EXPERIENCE\n\n/, ''));
-    
-    // Save the PDF
-    pdf.save("fratz_antigua_resume.pdf");
+    // Clean up
+    document.body.removeChild(link);
   }, []);
   const projects = [
     {
