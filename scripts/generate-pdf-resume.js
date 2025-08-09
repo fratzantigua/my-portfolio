@@ -3,6 +3,44 @@ const path = require('path');
 const { jsPDF } = require('jspdf');
 require('jspdf-autotable');
 
+// Extract project data from Projects.js
+const projectsFilePath = path.join(__dirname, '../components/Projects.js');
+const projectsFileContent = fs.readFileSync(projectsFilePath, 'utf8');
+
+// Function to extract project data from the file content
+function extractProjects(content) {
+  const projects = [];
+  const regex = /\{\s*title:\s*"([^"]+)",[\s\S]*?description:\s*"([^"]+)",[\s\S]*?tech:\s*"([^"]+)",[\s\S]*?bulletPoints:\s*\[((?:[\s\S]*?"[^"]*")[\s\S]*?)\],/g;
+  
+  let match;
+  while ((match = regex.exec(content)) !== null) {
+    const title = match[1];
+    const description = match[2];
+    const tech = match[3];
+    
+    // Extract bullet points
+    const bulletPointsStr = match[4];
+    const bulletPointsRegex = /"([^"]+)"/g;
+    const bulletPoints = [];
+    
+    let bulletMatch;
+    while ((bulletMatch = bulletPointsRegex.exec(bulletPointsStr)) !== null) {
+      bulletPoints.push(bulletMatch[1]);
+    }
+    
+    projects.push({
+      title,
+      description,
+      tech,
+      bulletPoints
+    });
+  }
+  
+  return projects;
+}
+
+const projects = extractProjects(projectsFileContent);
+
 // Create PDF document
 const pdf = new jsPDF({
   orientation: "portrait",
@@ -45,7 +83,7 @@ yPos += lineHeight * 1.5;
 
 // Add contact info
 pdf.setFontSize(10);
-const contactInfo = "fratzantigua@email.com | linkedin.com/in/fratzantigua | github.com/fratzantigua | (123) 456-7890";
+const contactInfo = "fratzantigua@email.com | linkedin.com/in/fratzantigua | github.com/fratzantigua";
 pdf.text(contactInfo, pdf.internal.pageSize.width / 2, yPos, { align: 'center' });
 yPos += lineHeight * 2;
 
@@ -57,8 +95,30 @@ yPos += lineHeight;
 
 pdf.setFontSize(10);
 pdf.setFont('helvetica', 'normal');
-const aboutMeText = "Hardworking and results-driven IT professional with 7 years of experience in the industry, specializing in application development, coding, and system maintenance. Proven ability to deliver high-quality software solutions and contribute effectively in team-oriented environments. Skilled communicator with a strong willingness to continuously learn and adapt to evolving technologies.";
+const aboutMeText = "Hardworking and results-driven IT professional with 7 years of experience in the industry, specializing in application development, coding, and system maintenance. Proven ability to deliver high-quality software solutions and contribute effectively in team-oriented environments. Skilled communicator with a strong willingness to continuously learn and adapt to evolving technologies.\n\nWith a keen interest in modern development practices, I actively stay updated on emerging tools, frameworks, and methodologies, including cloud computing, DevOps practices, and containerization technologies. I am particularly enthusiastic about the growing impact of artificial intelligence and machine learning in software development.";
 yPos = addWrappedText(aboutMeText, margin, yPos, contentWidth, lineHeight) + lineHeight;
+
+// Extract skills from project techs
+const allTechs = projects.map(project => project.tech).join(',');
+const techSet = new Set(allTechs.split(',').map(tech => tech.trim()).filter(tech => tech));
+const techList = Array.from(techSet).sort();
+
+// Group skills by category (based on common knowledge)
+const frontendSkills = techList.filter(tech => [
+  'React', 'Next.js', 'Angular', 'AngularJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS'
+].some(keyword => tech.includes(keyword)));
+
+const backendSkills = techList.filter(tech => [
+  'Node.js', 'NestJS', '.NET', 'Java', 'PHP', 'Python', 'C#', 'C++', 'Express'
+].some(keyword => tech.includes(keyword)));
+
+const databaseSkills = techList.filter(tech => [
+  'MongoDB', 'MySQL', 'PostgreSQL', 'Oracle', 'Sybase', 'Firebase', 'Database'
+].some(keyword => tech.includes(keyword)));
+
+const toolsSkills = techList.filter(tech => [
+  'Git', 'Docker', 'AWS', 'Jenkins', 'Linux', 'Bitbucket', 'ChatGPT', 'OpenAI', 'LLMs', 'Automation'
+].some(keyword => tech.includes(keyword)));
 
 // Add section: Technical Skills
 pdf.setFontSize(14);
@@ -67,25 +127,36 @@ pdf.text("TECHNICAL SKILLS", margin, yPos);
 yPos += lineHeight;
 
 pdf.setFontSize(10);
-pdf.setFont('helvetica', 'bold');
-pdf.text("Frontend:", margin, yPos);
-pdf.setFont('helvetica', 'normal');
-yPos = addWrappedText("React, Next.js, Angular, JavaScript, TypeScript, HTML5, CSS3, SASS, Redux, Material UI, Bootstrap", margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight;
 
-pdf.setFont('helvetica', 'bold');
-pdf.text("Backend:", margin, yPos);
-pdf.setFont('helvetica', 'normal');
-yPos = addWrappedText("Node.js, Express, NestJS, .NET, RESTful APIs, GraphQL, WebSockets", margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight;
+if (frontendSkills.length > 0) {
+  pdf.setFont('helvetica', 'bold');
+  pdf.text("Frontend:", margin, yPos);
+  pdf.setFont('helvetica', 'normal');
+  yPos = addWrappedText(frontendSkills.join(', '), margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight;
+}
 
-pdf.setFont('helvetica', 'bold');
-pdf.text("Database:", margin, yPos);
-pdf.setFont('helvetica', 'normal');
-yPos = addWrappedText("MongoDB, PostgreSQL, MySQL, Redis, Firebase", margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight;
+if (backendSkills.length > 0) {
+  pdf.setFont('helvetica', 'bold');
+  pdf.text("Backend:", margin, yPos);
+  pdf.setFont('helvetica', 'normal');
+  yPos = addWrappedText(backendSkills.join(', '), margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight;
+}
 
-pdf.setFont('helvetica', 'bold');
-pdf.text("Tools & Platforms:", margin, yPos);
-pdf.setFont('helvetica', 'normal');
-yPos = addWrappedText("Git, Docker, AWS, Jenkins, Linux, Bitbucket, Jira, Agile, CI/CD, n8n, ChatGPT, OpenAI", margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight * 2;
+if (databaseSkills.length > 0) {
+  pdf.setFont('helvetica', 'bold');
+  pdf.text("Database:", margin, yPos);
+  pdf.setFont('helvetica', 'normal');
+  yPos = addWrappedText(databaseSkills.join(', '), margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight;
+}
+
+if (toolsSkills.length > 0) {
+  pdf.setFont('helvetica', 'bold');
+  pdf.text("Tools & Platforms:", margin, yPos);
+  pdf.setFont('helvetica', 'normal');
+  yPos = addWrappedText(toolsSkills.join(', '), margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight;
+}
+
+yPos += lineHeight;
 
 // Add section: Professional Experience
 pdf.setFontSize(14);
@@ -93,85 +164,49 @@ pdf.setFont('helvetica', 'bold');
 pdf.text("PROFESSIONAL EXPERIENCE", margin, yPos);
 yPos += lineHeight * 1.5;
 
-// Experience 1
-pdf.setFontSize(12);
-pdf.setFont('helvetica', 'bold');
-pdf.text("N-Compass TV | Fullstack Software Engineer", margin, yPos);
-yPos += lineHeight;
-
-pdf.setFontSize(10);
-pdf.setFont('helvetica', 'italic');
-pdf.text("March 2024 – Current", margin, yPos);
-yPos += lineHeight;
-
-pdf.setFont('helvetica', 'normal');
-const experience1Points = [
-  "Architected and implemented scalable RESTful and GraphQL APIs that significantly improved data retrieval efficiency",
-  "Developed sophisticated automation workflows using n8n and custom integrations",
-  "Built intelligent AI-powered systems leveraging OpenAI's GPT models and other LLMs",
-  "Created advanced automation pipelines that seamlessly integrate multiple APIs and databases",
-  "Developed responsive and interactive web applications using Angular, React, and Next.js"
-];
-
-experience1Points.forEach(point => {
-  pdf.text("•", margin, yPos);
-  yPos = addWrappedText(point, margin + 5, yPos, contentWidth - 5, lineHeight) + lineHeight;
-});
-yPos += lineHeight;
-
-// Check if we need a new page
-if (yPos > 270) {
-  pdf.addPage();
-  yPos = 20;
-}
-
-// Experience 2
-pdf.setFontSize(12);
-pdf.setFont('helvetica', 'bold');
-pdf.text("WebSolutions LLC | Full Stack Developer", margin, yPos);
-yPos += lineHeight;
-
-pdf.setFontSize(10);
-pdf.setFont('helvetica', 'italic');
-pdf.text("Mar 2018 - Dec 2023", margin, yPos);
-yPos += lineHeight;
-
-pdf.setFont('helvetica', 'normal');
-const experience2Points = [
-  "Developed and maintained multiple client websites using React, Node.js, and MongoDB",
-  "Created RESTful APIs for mobile applications, ensuring seamless integration",
-  "Collaborated with UX/UI designers to implement responsive and accessible web interfaces",
-  "Reduced page load time by 60% through code optimization and implementing lazy loading"
-];
-
-experience2Points.forEach(point => {
-  pdf.text("•", margin, yPos);
-  yPos = addWrappedText(point, margin + 5, yPos, contentWidth - 5, lineHeight) + lineHeight;
-});
-yPos += lineHeight;
-
-// Experience 3
-pdf.setFontSize(12);
-pdf.setFont('helvetica', 'bold');
-pdf.text("Digital Creations | Junior Web Developer", margin, yPos);
-yPos += lineHeight;
-
-pdf.setFontSize(10);
-pdf.setFont('helvetica', 'italic');
-pdf.text("Jun 2016 - Feb 2018", margin, yPos);
-yPos += lineHeight;
-
-pdf.setFont('helvetica', 'normal');
-const experience3Points = [
-  "Built and maintained client websites using HTML, CSS, and JavaScript",
-  "Assisted in the development of a content management system using PHP and MySQL",
-  "Implemented responsive designs ensuring compatibility across different browsers and devices",
-  "Participated in weekly team meetings and contributed to project planning"
-];
-
-experience3Points.forEach(point => {
-  pdf.text("•", margin, yPos);
-  yPos = addWrappedText(point, margin + 5, yPos, contentWidth - 5, lineHeight) + lineHeight;
+// Add work experiences from projects
+projects.forEach((project, index) => {
+  // Skip projects that don't have bullet points (likely not work experience)
+  if (!project.bulletPoints || project.bulletPoints.length === 0) {
+    return;
+  }
+  
+  // Check if we need a new page
+  if (yPos > 250) {
+    pdf.addPage();
+    yPos = 20;
+  }
+  
+  // Extract company name and position from description
+  const descParts = project.description.split('|');
+  const period = descParts[0] ? descParts[0].trim() : '';
+  const position = descParts[1] ? descParts[1].trim() : '';
+  
+  pdf.setFontSize(12);
+  pdf.setFont('helvetica', 'bold');
+  pdf.text(`${project.title} | ${position}`, margin, yPos);
+  yPos += lineHeight;
+  
+  pdf.setFontSize(10);
+  pdf.setFont('helvetica', 'italic');
+  pdf.text(period, margin, yPos);
+  yPos += lineHeight;
+  
+  // Add bullet points
+  pdf.setFont('helvetica', 'normal');
+  project.bulletPoints.forEach((point, i) => {
+    // Limit to 5 bullet points per job to keep resume concise
+    if (i < 5) {
+      pdf.text("•", margin, yPos);
+      yPos = addWrappedText(point, margin + 5, yPos, contentWidth - 5, lineHeight) + lineHeight;
+    }
+  });
+  
+  // Add technologies used
+  pdf.setFont('helvetica', 'bold');
+  pdf.text("Technologies:", margin, yPos);
+  pdf.setFont('helvetica', 'normal');
+  yPos = addWrappedText(project.tech, margin + 25, yPos, contentWidth - 25, lineHeight) + lineHeight * 2;
 });
 
 // Add education section if there's room, otherwise add a new page
@@ -195,7 +230,7 @@ pdf.setFont('helvetica', 'italic');
 pdf.text("University of Technology | 2012 - 2016", margin, yPos);
 yPos += lineHeight * 2;
 
-// Add footer
+// Ensure output directory exists
 const outputDir = path.join(__dirname, '../public/documents');
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
@@ -206,3 +241,4 @@ const outputPath = path.join(outputDir, 'fratz_antigua_resume.pdf');
 pdf.save(outputPath);
 
 console.log(`PDF resume generated successfully at ${outputPath}`);
+
