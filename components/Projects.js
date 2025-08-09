@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaExternalLinkAlt, FaFileDownload } from "react-icons/fa";
 import { useCallback } from "react";
+import { jsPDF } from "jspdf";
+import { marked } from "marked";
 import {
   frontendSkills,
   backendSkills,
@@ -184,26 +186,105 @@ I started software development in 2018 managing multiple software applications. 
       return resumeContent;
     };
 
-    // Create and download the file
+    // Create and download the file as PDF
     const aboutMeContent = getAboutMe();
     const skillsContent = formatSkills();
     const workExperienceContent = formatWorkExperience();
 
     const fullResumeContent =
       aboutMeContent + skillsContent + workExperienceContent;
-
-    const blob = new Blob([fullResumeContent], { type: "text/markdown" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-
-    link.href = url;
-    link.download = "fratz_antigua_resume.md";
-    document.body.appendChild(link);
-    link.click();
-
-    // Clean up
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+      
+    // Convert markdown to HTML
+    const htmlContent = marked.parse(fullResumeContent);
+    
+    // Create PDF document
+    const pdf = new jsPDF({
+      orientation: "portrait",
+      unit: "mm",
+      format: "a4",
+    });
+    
+    // Set title and author metadata
+    pdf.setProperties({
+      title: "Fratz Antigua - Resume",
+      author: "Fratz Antigua",
+      subject: "Professional Resume",
+      keywords: "resume, software engineer, web developer",
+    });
+    
+    // Split the HTML content into pages to avoid overflow
+    const splitText = pdf.splitTextToSize(
+      htmlContent.replace(/<[^>]*>/g, ''), // Remove HTML tags
+      180 // Width in mm for content area
+    );
+    
+    // Add content to PDF
+    pdf.setFontSize(12);
+    
+    // Add title
+    pdf.setFontSize(24);
+    pdf.text("FRATZ ANTIGUA", 105, 20, { align: "center" });
+    pdf.setFontSize(16);
+    pdf.text("Professional Resume", 105, 30, { align: "center" });
+    pdf.setFontSize(12);
+    
+    // Add content with proper formatting
+    let yPosition = 40;
+    const lineHeight = 7;
+    
+    // Function to add a section to the PDF
+    const addSection = (title, content) => {
+      // Add section title
+      pdf.setFontSize(16);
+      pdf.setFont(undefined, 'bold');
+      pdf.text(title, 15, yPosition);
+      yPosition += lineHeight;
+      
+      // Add section content
+      pdf.setFontSize(12);
+      pdf.setFont(undefined, 'normal');
+      
+      // Split content into lines
+      const lines = content.split('\n');
+      
+      lines.forEach(line => {
+        // Check if we need a new page
+        if (yPosition > 270) {
+          pdf.addPage();
+          yPosition = 20;
+        }
+        
+        // Check if line is a header
+        if (line.startsWith('###')) {
+          pdf.setFont(undefined, 'bold');
+          pdf.text(line.replace(/^### /, ''), 15, yPosition);
+          pdf.setFont(undefined, 'normal');
+        } 
+        // Check if line is a bullet point
+        else if (line.startsWith('- ')) {
+          pdf.text(`• ${line.substring(2)}`, 20, yPosition);
+        } 
+        // Regular text
+        else if (line.trim() !== '') {
+          pdf.text(line, 15, yPosition);
+        }
+        
+        if (line.trim() !== '') {
+          yPosition += lineHeight;
+        }
+      });
+      
+      // Add spacing after section
+      yPosition += lineHeight;
+    };
+    
+    // Add sections to PDF
+    addSection("ABOUT ME", aboutMeContent.replace(/^# FRATZ ANTIGUA\n\n## ABOUT ME\n\n/, ''));
+    addSection("TECHNICAL SKILLS", skillsContent.replace(/^## TECHNICAL SKILLS\n\n/, ''));
+    addSection("PROFESSIONAL EXPERIENCE", workExperienceContent.replace(/^## PROFESSIONAL EXPERIENCE\n\n/, ''));
+    
+    // Save the PDF
+    pdf.save("fratz_antigua_resume.pdf");
   }, []);
   const projects = [
     {
