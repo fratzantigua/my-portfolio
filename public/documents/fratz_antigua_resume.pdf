@@ -10,166 +10,164 @@
 endobj
 4 0 obj
 <<
-/Length 4660
+/Length 5268
 >>
 stream
 0.5670000000000001 w
 0 G
 BT
-/F2 24 Tf
-27.5999999999999979 TL
+/F2 20 Tf
+23. TL
 0 g
-200.4399999999999693 785.1970866141732586 Td
+216.6399999999999864 799.3703149606299121 Td
 (FRATZ ANTIGUA) Tj
 ET
 BT
-/F1 14 Tf
-16.0999999999999979 TL
+/F1 12 Tf
+13.7999999999999989 TL
 0 g
-240.5199999999999534 755.4333070866141497 Td
+248.6799999999999784 780.6616535433070112 Td
 (Software Engineer) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-123.9399999999999267 725.6695275590550409 Td
+123.9399999999999267 761.952992125984224 Td
 (fratzantigua@email.com | linkedin.com/in/fratzantigua | github.com/fratzantigua) Tj
 ET
 BT
-/F2 14 Tf
-16.0999999999999979 TL
+/F2 12 Tf
+13.7999999999999989 TL
 0 g
-56.6929133858267775 685.9844881889763428 Td
+42.5196850393700814 746.3624409448818824 Td
 (ABOUT ME) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 666.1419685039369369 Td
-(Hardworking and results-driven IT professional with 7 years of experience in the industry, specializing in) Tj
-T* (application development, coding, and system maintenance. Proven ability to deliver high-quality software) Tj
-T* (solutions and contribute effectively in team-oriented environments. Skilled communicator with a strong) Tj
-T* (willingness to continuously learn and adapt to evolving technologies.) Tj
-T* () Tj
-T* (With a keen interest in modern development practices, I actively stay updated on emerging tools,) Tj
-T* (frameworks, and methodologies, including cloud computing, DevOps practices, and containerization) Tj
-T* (technologies. I am particularly enthusiastic about the growing impact of artificial intelligence and machine) Tj
-T* (learning in software development.) Tj
+42.5196850393700814 733.8899999999999864 Td
+(Results-driven Software Engineer with 7+ years of experience specializing in full-stack development. Proven track) Tj
+T* (record of delivering high-quality web applications using modern JavaScript frameworks \(React, Next.js, Angular\)) Tj
+T* (and backend technologies \(Node.js, NestJS\). Skilled in designing efficient database solutions and implementing) Tj
+T* (cloud-based architectures. Passionate about creating intuitive user experiences and optimizing application) Tj
+T* (performance. Adept at collaborating in cross-functional teams and adapting quickly to new technologies.) Tj
 ET
 BT
-/F2 14 Tf
-16.0999999999999979 TL
+/F2 12 Tf
+13.7999999999999989 TL
 0 g
-56.6929133858267775 467.716771653543276 Td
+42.5196850393700814 640.346692913385823 Td
 (TECHNICAL SKILLS) Tj
 ET
 BT
 /F2 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 447.8742519685038701 Td
+42.5196850393700814 627.8742519685039269 Td
 (Frontend:) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-127.5590551181102512 447.8742519685038701 Td
-(Angular, AngularJS, Next.js, TypeScript) Tj
+113.3858267716535551 627.8742519685039269 Td
+(React, Next.js, Angular, AngularJS, JavaScript, TypeScript, HTML, CSS, SASS, TailwindCSS,) Tj
+T* (Material UI, Bootstrap, Redux) Tj
 ET
 BT
 /F2 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 408.1892125984251152 Td
+42.5196850393700814 588.8978740157480161 Td
 (Backend:) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-127.5590551181102512 408.1892125984251152 Td
-(.NET, C#, C++, Java, Javascript, NestJS, Node.js, PHP, Python) Tj
+113.3858267716535551 588.8978740157480161 Td
+(JavaScript, Node.js, NestJS, .NET, Java, PHP, Python, C#, C++, Express, REST API, GraphQL,) Tj
+T* (Microservices) Tj
 ET
 BT
 /F2 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 368.5041732283464171 Td
+42.5196850393700814 549.9214960629921052 Td
 (Database:) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-127.5590551181102512 368.5041732283464171 Td
-(MySQL, Oracle, Sybase) Tj
+113.3858267716535551 549.9214960629921052 Td
+(MongoDB, MySQL, PostgreSQL, Oracle, Sybase, Firebase, Redis, DynamoDB, Prisma, Mongoose) Tj
 ET
 BT
 /F2 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 328.8191338582676053 Td
-(Tools & Platforms:) Tj
+42.5196850393700814 526.5356692913385359 Td
+(Tools:) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-127.5590551181102512 328.8191338582676053 Td
-(AWS, Automation Script, Automation Workflows, Bitbucket, ChatGPT, Docker, Git, Jenkins,) Tj
-T* (LLMs, Linux, OpenAI) Tj
+113.3858267716535551 526.5356692913385359 Td
+(Git, Docker, AWS, Jenkins, Linux, Bitbucket, ChatGPT, OpenAI, LLMs, Automation, Vercel, Jira,) Tj
+T* (Atlassian, Postman, n8n, CI/CD, GitHub Actions) Tj
 ET
 BT
-/F2 14 Tf
-16.0999999999999979 TL
+/F2 12 Tf
+13.7999999999999989 TL
 0 g
-56.6929133858267775 249.4490551181102092 Td
+42.5196850393700814 464.1734645669290558 Td
 (PROFESSIONAL EXPERIENCE) Tj
 ET
 BT
 /F2 12 Tf
 13.7999999999999989 TL
 0 g
-56.6929133858267775 219.6852755905511003 Td
+42.5196850393700814 448.5829133858267141 Td
 (N-Compass TV | Fullstack Software Engineer) Tj
 ET
 BT
 /F3 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 199.8427559055116944 Td
+42.5196850393700814 432.9923622047243725 Td
 (March 2024 – Current) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 180.0002362204724022 Td
+42.5196850393700814 417.4018110236219741 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 180.0002362204724022 Td
-(Architected and implemented scalable RESTful and GraphQL APIs that significantly improved data) Tj
-T* (retrieval efficiency and reduced client-side processing time) Tj
+56.6929133858267775 417.4018110236219741 Td
+(Architected and implemented scalable RESTful and GraphQL APIs that significantly improved data retrieval) Tj
+T* (efficiency and reduced client-side processing time) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 120.4726771653542983 Td
+42.5196850393700814 370.6301574803148924 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 120.4726771653542983 Td
+56.6929133858267775 370.6301574803148924 Td
 (Developed sophisticated automation workflows using n8n and custom integrations, streamlining business) Tj
 T* (processes and dramatically reducing manual operations) Tj
 ET
@@ -177,61 +175,91 @@ BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 60.9451181102360806 Td
+42.5196850393700814 323.8585039370077538 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 60.9451181102360806 Td
-(Built intelligent AI-powered systems leveraging OpenAI's GPT models and other LLMs to automate) Tj
-T* (content generation, data processing, and decision-making workflows) Tj
+56.6929133858267775 323.8585039370077538 Td
+(Built intelligent AI-powered systems leveraging OpenAI's GPT models and other LLMs to automate content) Tj
+T* (generation, data processing, and decision-making workflows) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 1.4175590551179766 Td
+42.5196850393700814 277.086850393700729 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 1.4175590551179766 Td
-(Created advanced automation pipelines that seamlessly integrate multiple APIs, databases, and) Tj
-T* (third-party services, processing thousands of operations daily) Tj
+56.6929133858267775 277.086850393700729 Td
+(Created advanced automation pipelines that seamlessly integrate multiple APIs, databases, and third-party) Tj
+T* (services, processing thousands of operations daily) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 -58.1100000000001273 Td
+42.5196850393700814 230.3151968503935905 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 -58.1100000000001273 Td
+56.6929133858267775 230.3151968503935905 Td
 (Developed responsive and interactive web applications using Angular, React, and Next.js with a focus on) Tj
 T* (performance optimization and accessibility standards) Tj
 ET
 BT
-/F2 10 Tf
+/F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 -117.6375590551182313 Td
-(Technologies:) Tj
+42.5196850393700814 183.5435433070865656 Td
+(•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-127.5590551181102512 -117.6375590551182313 Td
-(AngularJS, TypeScript, .NET, Node.js, Next.js, NestJS, AWS, Git, Jenkins, Linux, Bitbucket,) Tj
-T* (Docker, n8n, ChatGPT, OpenAI, LLMs, Automation Workflows) Tj
+56.6929133858267775 183.5435433070865656 Td
+(Designed and implemented custom LLM integrations that enhanced user experience through intelligent content) Tj
+T* (recommendations and automated customer support) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 136.7718897637794271 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 136.7718897637794271 Td
+(Built robust backend systems using .NET, Node.js, and NestJS that handle high-volume traffic and complex) Tj
+T* (business logic with exceptional uptime) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 90.0002362204724022 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 90.0002362204724022 Td
+(Engineered intelligent workflow automation systems that transformed processing time from hours to minutes) Tj
+T* (while maintaining high accuracy) Tj
 ET
 endstream
 endobj
@@ -245,218 +273,249 @@ endobj
 endobj
 6 0 obj
 <<
-/Length 4116
+/Length 4796
 >>
 stream
 0.5670000000000001 w
 0 G
 BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 785.1970866141732586 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 785.1970866141732586 Td
+(Implemented AI-driven data analysis and reporting automation that provides real-time insights and substantially) Tj
+T* (reduces manual reporting tasks) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 738.42543307086612 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 738.42543307086612 Td
+(Designed and optimized database schemas across NoSQL and SQL platforms, implementing efficient query) Tj
+T* (patterns that improved response times) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 691.6537795275589815 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 691.6537795275589815 Td
+(Created automated monitoring and alerting systems using custom workflows that proactively identify and resolve) Tj
+T* (issues before they impact users) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 644.8821259842519567 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 644.8821259842519567 Td
+(Implemented CI/CD pipelines and infrastructure-as-code practices within AWS, transforming deployment time) Tj
+T* (from hours to minutes) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 598.1104724409448181 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 598.1104724409448181 Td
+(Led sprint planning and retrospectives in an Agile environment, consistently delivering features on time while) Tj
+T* (maintaining high code quality) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 551.3388188976377933 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 551.3388188976377933 Td
+(Spearheaded the development of intelligent automation frameworks that adapt to changing business) Tj
+T* (requirements using machine learning algorithms) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 504.5671653543306547 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 504.5671653543306547 Td
+(Collaborated with UX/UI designers to implement pixel-perfect interfaces that significantly increased user) Tj
+T* (engagement metrics) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 457.795511811023573 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 457.795511811023573 Td
+(Reduced critical production issues through proactive monitoring, debugging, and implementing robust error) Tj
+T* (handling strategies with automated workflows) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 411.0238582677164914 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 411.0238582677164914 Td
+(Conducted regular tech talks on emerging technologies and implemented proof-of-concepts for AI and cloud) Tj
+T* (service integrations) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 364.2522047244094097 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 364.2522047244094097 Td
+(Spearheaded system architecture improvements that resulted in operational cost reduction and improved) Tj
+T* (scalability) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 317.480551181102328 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 317.480551181102328 Td
+(Implemented comprehensive testing strategies with extensive code coverage, ensuring exceptional product) Tj
+T* (quality and reliability) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 270.7088976377951894 Td
+(Technologies:) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 270.7088976377951894 Td
+(AngularJS, TypeScript, .NET, Node.js, Next.js, NestJS, AWS, Git, Jenkins, Linux, Bitbucket,) Tj
+T* (Docker, n8n, ChatGPT, OpenAI, LLMs, Automation Workflows) Tj
+ET
+BT
 /F2 12 Tf
 13.7999999999999989 TL
 0 g
-56.6929133858267775 785.1970866141732586 Td
+42.5196850393700814 228.614409448818833 Td
 (Accenture | Senior Software Engineer) Tj
 ET
 BT
 /F3 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 765.3545669291338527 Td
+42.5196850393700814 213.0238582677164914 Td
 (May 2022 – March 2024) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 745.5120472440944468 Td
+42.5196850393700814 197.4333070866141497 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 745.5120472440944468 Td
-(Managed and optimized enterprise-level Atlassian ecosystem \(Jira, Confluence, JSM\) serving over 5000) Tj
-T* (users while significantly reducing ticket resolution time) Tj
+56.6929133858267775 197.4333070866141497 Td
+(Managed and optimized enterprise-level Atlassian ecosystem \(Jira, Confluence, JSM\) serving over 5000 users) Tj
+T* (while significantly reducing ticket resolution time) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 685.9844881889763428 Td
+42.5196850393700814 150.6616535433070112 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 685.9844881889763428 Td
-(Provided expert-level L2 technical support for Atlassian products, resolving complex issues with) Tj
-T* (consistently high customer satisfaction ratings) Tj
+56.6929133858267775 150.6616535433070112 Td
+(Provided expert-level L2 technical support for Atlassian products, resolving complex issues with consistently) Tj
+T* (high customer satisfaction ratings) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 626.4569291338582389 Td
+42.5196850393700814 103.8899999999998727 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 626.4569291338582389 Td
-(Executed seamless data migration to new Atlassian versions using Postman and custom APIs, achieving) Tj
-T* (zero data loss across hundreds of projects) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 566.9293700787401349 Td
-(•) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-70.8661417322834666 566.9293700787401349 Td
-(Identified and resolved critical application bottlenecks, dramatically improving system performance during) Tj
-T* (peak usage periods) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 507.4018110236219741 Td
-(•) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-70.8661417322834666 507.4018110236219741 Td
-(Implemented strategic application enhancements that substantially increased user productivity and) Tj
-T* (reduced manual processes) Tj
-ET
-BT
-/F2 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 447.8742519685038701 Td
-(Technologies:) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-127.5590551181102512 447.8742519685038701 Td
-(PHP,CAWA, Atlassian, Automation Script, AWS, Git, Jenkins, Linux, Bitbucket, Docker,) Tj
-T* (ChatGPT, OpenAI, LLMs) Tj
-ET
-BT
-/F2 12 Tf
-13.7999999999999989 TL
-0 g
-56.6929133858267775 368.5041732283464171 Td
-(FPT Software Inc | Software Engineer / Automation Tester) Tj
-ET
-BT
-/F3 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 348.6616535433070112 Td
-(December 2020 – May 2022) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 328.8191338582676053 Td
-(•) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-70.8661417322834666 328.8191338582676053 Td
-(Developed advanced Shell scripts that automated the majority of manual test procedures, transforming) Tj
-T* (testing time from days to hours) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 269.2915748031495013 Td
-(•) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-70.8661417322834666 269.2915748031495013 Td
-(Created sophisticated Python automation frameworks that substantially increased test coverage while) Tj
-T* (maintaining excellent accuracy in defect detection) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 209.7640157480313974 Td
-(•) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-70.8661417322834666 209.7640157480313974 Td
-(Successfully migrated mission-critical Java applications from Solaris to Linux RHEL 8, upgrading from) Tj
-T* (Java 1.8 to Java 14 with zero downtime) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 150.2364566929132934 Td
-(•) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-70.8661417322834666 150.2364566929132934 Td
-(Conducted comprehensive analysis of legacy system configurations, creating detailed compatibility) Tj
-T* (mappings that ensured seamless transition to new environments) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 90.7088976377951894 Td
-(•) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-70.8661417322834666 90.7088976377951894 Td
-(Led complex database migration from Sybase to MySQL, preserving data integrity across numerous) Tj
-T* (tables and optimizing query performance) Tj
-ET
-BT
-/F2 10 Tf
-11.5 TL
-0 g
-56.6929133858267775 31.1813385826770855 Td
-(Technologies:) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0 g
-127.5590551181102512 31.1813385826770855 Td
-(Java,Sybase,Linux,Scripting,Bitbucket,GIT,Jenkins,Oracle,MySQL, TestLink, Python, Shell) Tj
-T* (Scripting) Tj
+56.6929133858267775 103.8899999999998727 Td
+(Executed seamless data migration to new Atlassian versions using Postman and custom APIs, achieving zero) Tj
+T* (data loss across hundreds of projects) Tj
 ET
 endstream
 endobj
@@ -470,7 +529,290 @@ endobj
 endobj
 8 0 obj
 <<
-/Length 2336
+/Length 5171
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 785.1970866141732586 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 785.1970866141732586 Td
+(Identified and resolved critical application bottlenecks, dramatically improving system performance during peak) Tj
+T* (usage periods) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 738.42543307086612 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 738.42543307086612 Td
+(Implemented strategic application enhancements that substantially increased user productivity and reduced) Tj
+T* (manual processes) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 691.6537795275589815 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 691.6537795275589815 Td
+(Designed and optimized CI/CD pipelines that significantly reduced build times and deployment failures) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 660.4726771653542983 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 660.4726771653542983 Td
+(Automated deployment workflows using Jenkins and Docker, enabling much more frequent releases with) Tj
+T* (consistent quality) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 613.7010236220471597 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 613.7010236220471597 Td
+(Developed sophisticated Bash scripts that automated routine administrative tasks, saving substantial time for the) Tj
+T* (team weekly) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 566.9293700787401349 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 566.9293700787401349 Td
+(Reverse-engineered and modernized legacy pipeline systems, successfully migrating critical functionality from) Tj
+T* (decommissioned scripts) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 520.1577165354329964 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 520.1577165354329964 Td
+(Created Python automation scripts that transformed QA testing cycles from days to hours while improving test) Tj
+T* (coverage) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 473.3860629921259147 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 473.3860629921259147 Td
+(Implemented and optimized CAWA scheduling systems that greatly improved resource allocation efficiency) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 442.2049606299212314 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 442.2049606299212314 Td
+(Maintained meticulous documentation and code quality standards, resulting in dramatically fewer regression) Tj
+T* (issues) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 395.4333070866140929 Td
+(Technologies:) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 395.4333070866140929 Td
+(PHP,CAWA, Atlassian, Automation Script, AWS, Git, Jenkins, Linux, Bitbucket, Docker, ChatGPT,) Tj
+T* (OpenAI, LLMs) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+42.5196850393700814 353.3388188976377364 Td
+(FPT Software Inc | Software Engineer / Automation Tester) Tj
+ET
+BT
+/F3 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 337.7482677165353948 Td
+(December 2020 – May 2022) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 322.1577165354329964 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 322.1577165354329964 Td
+(Developed advanced Shell scripts that automated the majority of manual test procedures, transforming testing) Tj
+T* (time from days to hours) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 275.3860629921259715 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 275.3860629921259715 Td
+(Created sophisticated Python automation frameworks that substantially increased test coverage while) Tj
+T* (maintaining excellent accuracy in defect detection) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 228.614409448818833 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 228.614409448818833 Td
+(Successfully migrated mission-critical Java applications from Solaris to Linux RHEL 8, upgrading from Java 1.8) Tj
+T* (to Java 14 with zero downtime) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 181.8427559055116944 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 181.8427559055116944 Td
+(Conducted comprehensive analysis of legacy system configurations, creating detailed compatibility mappings) Tj
+T* (that ensured seamless transition to new environments) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 135.0711023622046696 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 135.0711023622046696 Td
+(Led complex database migration from Sybase to MySQL, preserving data integrity across numerous tables and) Tj
+T* (optimizing query performance) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 88.2994488188975311 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 88.2994488188975311 Td
+(Engineered efficient CI/CD pipelines that dramatically reduced build times and deployment time, enabling more) Tj
+T* (frequent releases) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 41.5277952755903925 Td
+(Technologies:) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 41.5277952755903925 Td
+(Java,Sybase,Linux,Scripting,Bitbucket,GIT,Jenkins,Oracle,MySQL, TestLink, Python, Shell Scripting) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 4070
 >>
 stream
 0.5670000000000001 w
@@ -479,28 +821,28 @@ BT
 /F2 12 Tf
 13.7999999999999989 TL
 0 g
-56.6929133858267775 785.1970866141732586 Td
+42.5196850393700814 785.1970866141732586 Td
 (Alliance Software Inc | Software Engineer) Tj
 ET
 BT
 /F3 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 765.3545669291338527 Td
+42.5196850393700814 769.6065354330708033 Td
 (July 2018 – April 2021) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 745.5120472440944468 Td
+42.5196850393700814 754.0159842519684616 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 745.5120472440944468 Td
+56.6929133858267775 754.0159842519684616 Td
 (Developed and maintained enterprise banking applications, implementing critical financial features that) Tj
 T* (processed millions in daily transactions) Tj
 ET
@@ -508,14 +850,14 @@ BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 685.9844881889763428 Td
+42.5196850393700814 707.2443307086614368 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 685.9844881889763428 Td
+56.6929133858267775 707.2443307086614368 Td
 (Achieved comprehensive test coverage through extensive djUnit test cases \(SLK\), substantially reducing) Tj
 T* (post-deployment issues) Tj
 ET
@@ -523,91 +865,179 @@ BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 626.4569291338582389 Td
+42.5196850393700814 660.4726771653542983 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 626.4569291338582389 Td
-(Pioneered Minaoshi methodology for systematic bug analysis, dramatically reducing recurring defects) Tj
-T* (across multiple banking systems) Tj
+56.6929133858267775 660.4726771653542983 Td
+(Pioneered Minaoshi methodology for systematic bug analysis, dramatically reducing recurring defects across) Tj
+T* (multiple banking systems) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 613.7010236220471597 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 613.7010236220471597 Td
+(Established rigorous software testing protocols and validation procedures that significantly improved code quality) Tj
+T* (metrics) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 566.9293700787401349 Td
+(•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
 56.6929133858267775 566.9293700787401349 Td
+(Architected data management systems for real-time analysis and built Azure DevOps pipelines that integrated) Tj
+T* (with satellite systems, greatly reducing deployment time) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 520.1577165354329964 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 566.9293700787401349 Td
-(Established rigorous software testing protocols and validation procedures that significantly improved code) Tj
-T* (quality metrics) Tj
+56.6929133858267775 520.1577165354329964 Td
+(Led client consultations for software design requirements, resulting in higher customer satisfaction scores and) Tj
+T* (repeat business) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 507.4018110236219741 Td
+42.5196850393700814 473.3860629921259147 Td
 (•) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-70.8661417322834666 507.4018110236219741 Td
-(Architected data management systems for real-time analysis and built Azure DevOps pipelines that) Tj
-T* (integrated with satellite systems, greatly reducing deployment time) Tj
+56.6929133858267775 473.3860629921259147 Td
+(Optimized legacy code bases, reducing memory usage and substantially improving application performance) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 442.2049606299212314 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 442.2049606299212314 Td
+(Implemented quality assurance processes that dramatically reduced critical bugs in production environments) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 411.0238582677164914 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 411.0238582677164914 Td
+(Successfully integrated RFID and EFT payment systems with point-of-sale applications, processing thousands of) Tj
+T* (transactions daily with exceptional reliability) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 364.2522047244094097 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 364.2522047244094097 Td
+(Modernized legacy applications for compatibility with new hardware platforms while maintaining backward) Tj
+T* (compatibility with existing systems) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+42.5196850393700814 317.480551181102328 Td
+(•) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 317.480551181102328 Td
+(Delivered feature enhancements that significantly increased application functionality while maintaining system) Tj
+T* (stability) Tj
 ET
 BT
 /F2 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 447.8742519685038701 Td
+42.5196850393700814 270.7088976377951894 Td
 (Technologies:) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0 g
-127.5590551181102512 447.8742519685038701 Td
+113.3858267716535551 270.7088976377951894 Td
 (Java,PHP,Javascript,C++,C#,Angular,GIT,MySQL,) Tj
 ET
 BT
-/F2 14 Tf
-16.0999999999999979 TL
+/F2 12 Tf
+13.7999999999999989 TL
 0 g
-56.6929133858267775 388.3466929133857661 Td
+42.5196850393700814 244.2049606299211746 Td
 (EDUCATION) Tj
 ET
 BT
 /F2 12 Tf
 13.7999999999999989 TL
 0 g
-56.6929133858267775 358.5829133858267141 Td
+42.5196850393700814 231.7325196850392786 Td
 (Bachelor of Science in Computer Science) Tj
 ET
 BT
 /F3 10 Tf
 11.5 TL
 0 g
-56.6929133858267775 338.7403937007873083 Td
-(University of Technology | 2012 - 2016) Tj
+42.5196850393700814 216.1419685039369369 Td
+(University of Santo Tomas - Legazpi | 2014 - 2018) Tj
 ET
 endstream
 endobj
 1 0 obj
 <</Type /Pages
-/Kids [3 0 R 5 0 R 7 0 R ]
-/Count 3
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R ]
+/Count 4
 >>
 endobj
-9 0 obj
+11 0 obj
 <<
 /Type /Font
 /BaseFont /Helvetica
@@ -617,7 +1047,7 @@ endobj
 /LastChar 255
 >>
 endobj
-10 0 obj
+12 0 obj
 <<
 /Type /Font
 /BaseFont /Helvetica-Bold
@@ -627,7 +1057,7 @@ endobj
 /LastChar 255
 >>
 endobj
-11 0 obj
+13 0 obj
 <<
 /Type /Font
 /BaseFont /Helvetica-Oblique
@@ -637,7 +1067,7 @@ endobj
 /LastChar 255
 >>
 endobj
-12 0 obj
+14 0 obj
 <<
 /Type /Font
 /BaseFont /Helvetica-BoldOblique
@@ -647,7 +1077,7 @@ endobj
 /LastChar 255
 >>
 endobj
-13 0 obj
+15 0 obj
 <<
 /Type /Font
 /BaseFont /Courier
@@ -657,7 +1087,7 @@ endobj
 /LastChar 255
 >>
 endobj
-14 0 obj
+16 0 obj
 <<
 /Type /Font
 /BaseFont /Courier-Bold
@@ -667,7 +1097,7 @@ endobj
 /LastChar 255
 >>
 endobj
-15 0 obj
+17 0 obj
 <<
 /Type /Font
 /BaseFont /Courier-Oblique
@@ -677,7 +1107,7 @@ endobj
 /LastChar 255
 >>
 endobj
-16 0 obj
+18 0 obj
 <<
 /Type /Font
 /BaseFont /Courier-BoldOblique
@@ -687,7 +1117,7 @@ endobj
 /LastChar 255
 >>
 endobj
-17 0 obj
+19 0 obj
 <<
 /Type /Font
 /BaseFont /Times-Roman
@@ -697,7 +1127,7 @@ endobj
 /LastChar 255
 >>
 endobj
-18 0 obj
+20 0 obj
 <<
 /Type /Font
 /BaseFont /Times-Bold
@@ -707,7 +1137,7 @@ endobj
 /LastChar 255
 >>
 endobj
-19 0 obj
+21 0 obj
 <<
 /Type /Font
 /BaseFont /Times-Italic
@@ -717,7 +1147,7 @@ endobj
 /LastChar 255
 >>
 endobj
-20 0 obj
+22 0 obj
 <<
 /Type /Font
 /BaseFont /Times-BoldItalic
@@ -727,7 +1157,7 @@ endobj
 /LastChar 255
 >>
 endobj
-21 0 obj
+23 0 obj
 <<
 /Type /Font
 /BaseFont /ZapfDingbats
@@ -736,7 +1166,7 @@ endobj
 /LastChar 255
 >>
 endobj
-22 0 obj
+24 0 obj
 <<
 /Type /Font
 /BaseFont /Symbol
@@ -749,36 +1179,36 @@ endobj
 <<
 /ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
 /Font <<
-/F1 9 0 R
-/F2 10 0 R
-/F3 11 0 R
-/F4 12 0 R
-/F5 13 0 R
-/F6 14 0 R
-/F7 15 0 R
-/F8 16 0 R
-/F9 17 0 R
-/F10 18 0 R
-/F11 19 0 R
-/F12 20 0 R
-/F13 21 0 R
-/F14 22 0 R
+/F1 11 0 R
+/F2 12 0 R
+/F3 13 0 R
+/F4 14 0 R
+/F5 15 0 R
+/F6 16 0 R
+/F7 17 0 R
+/F8 18 0 R
+/F9 19 0 R
+/F10 20 0 R
+/F11 21 0 R
+/F12 22 0 R
+/F13 23 0 R
+/F14 24 0 R
 >>
 /XObject <<
 >>
 >>
 endobj
-23 0 obj
+25 0 obj
 <<
 /Producer (jsPDF 3.0.1)
 /Title (Fratz Antigua - Resume)
 /Subject (Professional Resume)
 /Author (Fratz Antigua)
 /Keywords (resume, software engineer, web developer)
-/CreationDate (D:20250810002202+08'00')
+/CreationDate (D:20250810092621+08'00')
 >>
 endobj
-24 0 obj
+26 0 obj
 <<
 /Type /Catalog
 /Pages 1 0 R
@@ -787,39 +1217,41 @@ endobj
 >>
 endobj
 xref
-0 25
+0 27
 0000000000 65535 f 
-0000011694 00000 n 
-0000013527 00000 n 
+0000020078 00000 n 
+0000021918 00000 n 
 0000000015 00000 n 
 0000000152 00000 n 
-0000004864 00000 n 
-0000005001 00000 n 
-0000009169 00000 n 
-0000009306 00000 n 
-0000011763 00000 n 
-0000011888 00000 n 
-0000012019 00000 n 
-0000012153 00000 n 
-0000012291 00000 n 
-0000012415 00000 n 
-0000012544 00000 n 
-0000012676 00000 n 
-0000012812 00000 n 
-0000012940 00000 n 
-0000013067 00000 n 
-0000013196 00000 n 
-0000013329 00000 n 
-0000013431 00000 n 
-0000013779 00000 n 
-0000014005 00000 n 
+0000005472 00000 n 
+0000005609 00000 n 
+0000010457 00000 n 
+0000010594 00000 n 
+0000015817 00000 n 
+0000015955 00000 n 
+0000020153 00000 n 
+0000020279 00000 n 
+0000020410 00000 n 
+0000020544 00000 n 
+0000020682 00000 n 
+0000020806 00000 n 
+0000020935 00000 n 
+0000021067 00000 n 
+0000021203 00000 n 
+0000021331 00000 n 
+0000021458 00000 n 
+0000021587 00000 n 
+0000021720 00000 n 
+0000021822 00000 n 
+0000022171 00000 n 
+0000022397 00000 n 
 trailer
 <<
-/Size 25
-/Root 24 0 R
-/Info 23 0 R
-/ID [ <89E494DE025AD7AA0A4F906893575C83> <89E494DE025AD7AA0A4F906893575C83> ]
+/Size 27
+/Root 26 0 R
+/Info 25 0 R
+/ID [ <24BF179C84205FD06FD5E058A75B2A69> <24BF179C84205FD06FD5E058A75B2A69> ]
 >>
 startxref
-14109
+22501
 %%EOF

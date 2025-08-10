@@ -76,11 +76,11 @@ export const toolsSkills = [
   { name: "AWS", icon: "/skills/aws.svg" },
   { name: "Vercel", icon: "/skills/vercel.svg" },
   { name: "OpenAI", icon: "/skills/openai.svg" },
+  { name: "n8n", icon: "/skills/n8n.svg" },
   { name: "Postman", icon: "/skills/postman.svg" },
 ];
 
 const Skills = () => {
-
   return (
     <div id="skills" className="w-full py-20 bg-background relative">
       {/* Background accent */}

@@ -101,23 +101,26 @@ const ProjectItem = ({
 const Projects = () => {
   // Function to generate and download resume
   const exportResume = useCallback(() => {
-    // Create a link element to download the pre-generated PDF file
-    const link = document.createElement('a');
-    
-    // Set the href to the pre-generated PDF file in the public directory
-    link.href = '/documents/fratz_antigua_resume.pdf';
-    
-    // Set download attribute to suggest a filename
-    link.download = 'fratz_antigua_resume.pdf';
-    
-    // Append to the document
-    document.body.appendChild(link);
-    
-    // Trigger the download
-    link.click();
-    
-    // Clean up
-    document.body.removeChild(link);
+    // Method 1: Using window.open to open the PDF in a new tab
+    // This is more reliable across browsers
+    window.open("/documents/fratz_antigua_resume.pdf", "_blank");
+
+    // Method 2: Force download using fetch API (as a fallback)
+    fetch("/documents/fratz_antigua_resume.pdf")
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "FratzAntiguaResume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(link);
+      })
+      .catch((error) => {
+        console.error("Error downloading PDF:", error);
+      });
   }, []);
   const projects = [
     {
