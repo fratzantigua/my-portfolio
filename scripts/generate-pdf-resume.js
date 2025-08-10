@@ -98,13 +98,13 @@ const contactInfo =
 pdf.text(contactInfo, pdf.internal.pageSize.width / 2, yPos, {
   align: "center",
 });
-yPos += lineHeight;
+yPos += lineHeight * 1.5;
 
 // Add section: About Me
 pdf.setFontSize(12);
 pdf.setFont("helvetica", "bold");
 pdf.text("ABOUT ME", margin, yPos);
-yPos += lineHeight * 0.8;
+yPos += lineHeight * 1.2;
 
 pdf.setFontSize(10);
 pdf.setFont("helvetica", "normal");
@@ -259,7 +259,7 @@ const toolsSkills = techList.filter((tech) =>
 pdf.setFontSize(12);
 pdf.setFont("helvetica", "bold");
 pdf.text("TECHNICAL SKILLS", margin, yPos);
-yPos += lineHeight * 0.8;
+yPos += lineHeight * 1.5;
 
 pdf.setFontSize(10);
 
@@ -329,7 +329,7 @@ yPos += lineHeight * 1.5; // Increased spacing before Professional Experience se
 pdf.setFontSize(12);
 pdf.setFont("helvetica", "bold");
 pdf.text("PROFESSIONAL EXPERIENCE", margin, yPos);
-yPos += lineHeight * 1; // Increased spacing after heading
+yPos += lineHeight * 1.5; // Increased spacing after heading
 
 // Add work experiences from projects
 projects.forEach((project, index) => {
@@ -352,12 +352,12 @@ projects.forEach((project, index) => {
   pdf.setFontSize(12);
   pdf.setFont("helvetica", "bold");
   pdf.text(`${project.title} | ${position}`, margin, yPos);
-  yPos += lineHeight;
+  yPos += lineHeight * 0.9; // Reduced spacing after job title
 
   pdf.setFontSize(10);
   pdf.setFont("helvetica", "italic");
   pdf.text(period, margin, yPos);
-  yPos += lineHeight;
+  yPos += lineHeight * 1.1; // Reduced spacing after period
 
   // Add ALL bullet points - no limit
   pdf.setFont("helvetica", "normal");
@@ -370,7 +370,7 @@ projects.forEach((project, index) => {
     pdf.text("•", margin, yPos);
     yPos =
       addWrappedText(point, margin + 5, yPos, contentWidth - 5, lineHeight) +
-      lineHeight;
+      lineHeight * 0.3; // Reduced spacing between bullet points
   });
 
   // Add technologies used
@@ -385,7 +385,7 @@ projects.forEach((project, index) => {
       contentWidth - 25,
       lineHeight
     ) +
-    lineHeight * 0.7; // Reduced spacing after technologies
+    lineHeight * 1.2; // Increased spacing after technologies (between jobs)
 });
 
 // Add education section if there's room, otherwise add a new page
