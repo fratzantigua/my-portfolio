@@ -81,9 +81,14 @@ yPos += lineHeight * 1.2;
 
 pdf.setFontSize(12); // Reduced from 14
 pdf.setFont("helvetica", "normal");
-pdf.text("Software Engineer", pdf.internal.pageSize.width / 2, yPos, {
-  align: "center",
-});
+pdf.text(
+  "Full Stack Software Engineer",
+  pdf.internal.pageSize.width / 2,
+  yPos,
+  {
+    align: "center",
+  }
+);
 yPos += lineHeight * 1.2;
 
 // Add contact info
